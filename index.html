@@ -33,10 +33,39 @@
       var randomIndex = Math.floor(Math.random() * foods.length);
       return foods[randomIndex];
     }
+
+    //a function that returns a random salutation
+    function randomSalutation() {
+      var salutations = [
+        'Mr',
+        'Mrs',
+        'Ms',
+        'Dr',
+        'Prof',
+        'Sir',
+        'Lady',
+        'Lord',
+        'Dame',
+        'Prince',
+        'Princess',
+        'Duke',
+        'Duchess',
+        'Master',
+        'Mistress',
+        'Prince'
+      ]
+      var randomIndex = Math.floor(Math.random() * salutations.length);
+      return salutations[randomIndex];
+    }
+
     //a function that generates a random animal and it's favourite food
     function generateString(food, animal) {
-      return animal + " is " + getArticle(food) + ' ' + food + " eater.";
+      var result = animal + " is " + getArticle(food) + ' ' + food + " eater.";
+      // prepend random salutation to result  
+      result = randomSalutation() + ' ' + result;
+      return result;
     }
+
 
 
     //a function that returns 'a' or 'an' depending on the first letter of the string
