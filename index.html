@@ -15,7 +15,7 @@
   <h1 id="maintitle"></h1>
   <p>This code was written by Github Copilot</p>
 
-  //scripts
+  <!-- scripts -->
   <script>
     //a function that returns a random animal
     function getRandomAnimal() {
@@ -94,18 +94,22 @@
       align-items: center;
       justify-content: center;
 
+
     }
 
     h1 {
       text-align: center;
-      font-size: 3em;
+      font-size: 6em;
       margin-top: 20px;
       text-transform: uppercase;
+      text-align: center;
     }
 
-    #maintitle {
-      text-align: center;
-      font-size: 5em;
+    /* make h1 text smaller on mobile */
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 3em;
+      }
     }
   </style>
 </body>
