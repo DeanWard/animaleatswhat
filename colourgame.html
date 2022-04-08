@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- import roboto from google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1 id="maintitle"></h1>
+
+  <script>
+    //a function that returns a random animal
+    function getRandomAnimal() {
+      var animals = ["cat", "dog", "bird", "fish", "lizard", "snake", "turtle", "hamster", "pig", "cow", "horse", "sheep", "goat", "panda", "koala", "penguin", "pig", "rabbit", "zebra", "giraffe", "elephant", "rhinoceros", "monkey", "dolphin", "whale", "crocodile", "tiger", "bear", "lion", "wolf", "deer", "fox", "panther", "coyote", "alligator", "crocodile", "dinosaur", "dolphin", "eagle", "falcon", "giraffe", "hawk", "hummingbird", "jaguar", "lion", "owl", "parrot", "penguin", "polar bear", "raccoon", "seal", "shark", "tiger", "turtle", "zebra"];
+      var randomIndex = Math.floor(Math.random() * animals.length);
+      return animals[randomIndex];
+    }
+    //a function that return a random food
+    function getRandomFood() {
+      var foods = ["apple", "banana", "orange", "pear", "strawberry", "grape", "cherry", "peach", "pineapple", "kiwi", "mango", "melon", "watermelon", "papaya", "peach", "pear", "plum", "raspberry", "blueberry", "blackberry", "coconut", "cranberry", "fig", "grapefruit", "guava", "lemon", "lime", "lychee", "mango", "nectarine", "orange", "papaya", "peach", "pear", "plum", "raspberry", "blueberry", "blackberry", "coconut", "cranberry", "fig", "grapefruit", "guava", "lemon", "lime", "lychee", "mango", "nectarine", "orange", "papaya", "peach", "pear", "plum", "raspberry", "blueberry", "blackberry", "coconut", "cranberry", "fig", "grapefruit", "guava", "lemon", "lime", "lychee", "mango", "nectarine", "orange", "papaya", "peach", "pear", "plum", "raspberry", "blueberry", "blackberry", "coconut", "cranberry", "fig", "grapefruit", "guava", "lemon", "lime", "lychee", "mango", "nectarine", "orange", "papaya", "peach", "pear", "plum", "raspberry", "blueberry", "blackberry", "coconut", "cranberry", "fig", "grapefruit", "guava", "lemon", "lime", "lychee", "mango", "nectarine", "orange", "papaya", "peach", "pear", "plum", "raspberry", "blueberry", "blackberry", "coconut", "cranberry", "fig", "grapefruit", "guava", "lemon", "lime", "lychee", "mango"];
+      // add meats to food array
+      foods.push("beef", "chicken", "duck", "fish", "lamb", "pork", "turkey", "venison", "bacon", "beef", "chicken", "duck", "fish", "lamb", "pork", "turkey", "venison", "bacon", "beef", "chicken", "duck", "fish", "lamb", "pork", "turkey", "venison", "bacon", "beef", "chicken", "duck", "fish", "lamb", "pork", "turkey", "venison", "bacon", "beef", "chicken", "duck", "fish", "lamb", "pork", "turkey", "venison", "bacon", "beef", "chicken", "duck", "fish", "lamb", "pork", "turkey", "venison", "bacon", "beef", "chicken", "duck", "fish", "lamb", "pork", "turkey", "venison", "bacon", "beef", "chicken", "duck", "fish", "lamb", "pork", "turkey", "venison", "bacon", "beef", "chicken", "duck", "fish", "lamb", "pork", "turkey", "venison", "bacon", "beef", "chicken", "duck", "fish", "lamb", "pork", "turkey", "venison", "bacon", "beef", "chicken", "duck", "fish", "lamb", "pork", "turkey", "venison", "bacon", "beef", "chicken", "duck", "fish", "lamb", "pork", "turkey", "venison", "bacon", "beef", "chicken", "duck", "fish", "lamb", "pork", "turkey", "venison", "bacon", "beef", "chicken", "duck", "fish", "lamb", "pork", "turkey", "venison", "bacon", "beef");
+      // add vegitables to foods array
+      foods.push("asparagus", "broccoli", "carrot", "cauliflower", "celery", "corn", "cucumber", "eggplant", "green beans", "lettuce", "mushroom", "onion", "peas", "potato", "radish", "spinach", "sweet potato", "tomato", "zucchini", "asparagus", "broccoli", "carrot", "cauliflower", "celery", "corn", "cucumber", "eggplant", "green beans", "lettuce", "mushroom", "onion", "peas", "potato", "radish", "spinach", "sweet potato", "tomato", "zucchini", "asparagus", "broccoli", "carrot", "cauliflower", "celery", "corn", "cucumber", "eggplant", "green beans", "lettuce", "mushroom", "onion", "peas", "potato", "radish", "spinach", "sweet potato", "tomato", "zucchini", "asparagus", "broccoli", "carrot", "cauliflower", "celery", "corn", "cucumber", "eggplant", "green beans", "lettuce", "mushroom", "onion", "peas", "potato", "radish", "spinach", "sweet potato", "tomato", "zucchini", "asparagus", "broccoli", "carrot", "cauliflower", "celery", "corn", "cucumber", "eggplant", "green beans", "lettuce", "mushroom", "onion", "peas", "potato", "radish", "spinach", "sweet potato", "tomato", "zucchini", "asparagus", "broccoli", "carrot", "cauliflower", "celery", "corn", "cucumber", "eggplant", "green beans", "lettuce", "mushroom", "onion", "peas", "potato", "radish", "spinach", "sweet potato", "tomato", "zucchini", "asparagus", "broccoli", "carrot");
+      var randomIndex = Math.floor(Math.random() * foods.length);
+      return foods[randomIndex];
+    }
+    //a function that generates a random animal and it's favourite food
+    function generateString(food, animal) {
+      return animal + " is " + getArticle(food) + ' ' + food + " eater.";
+    }
+
+
+    //a list of valid bank accounts with sortcode and account number
+    var accounts = {
+
+    }
+
+    //a function that returns 'a' or 'an' depending on the first letter of the string
+    function getArticle(string) {
+      var firstLetter = string.charAt(0);
+      if (firstLetter == "a" || firstLetter == "e" || firstLetter == "i" || firstLetter == "o" || firstLetter == "u") {
+        return "an";
+      } else {
+        return "a";
+      }
+    }
+
+    //set the main title to the random animal every 2 seconds and when page loads
+    var mainTitle = document.getElementById("maintitle"); //get the main title
+    var interval = setInterval(function () {
+      setTitle();
+    }, 2000);
+    setTitle();
+
+    function setTitle() {
+      var animal = getRandomAnimal();
+      var food = getRandomFood();
+      var string = generateString(food, animal);
+      mainTitle.innerHTML = string;
+    }
+
+    // a function to animate the main title between old and new
+
+    // set the background to a random pastel shade on page load 
+    var body = document.body;
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    body.style.background = "rgb(" + r + "," + g + "," + b + ")";
+
+
+    
+  </script>
+  <!-- styles -->
+  <style>
+    /* set body and html to 100% height */
+    body, html {
+      height: 100%;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+
+    #maintitle {
+      text-align: center;
+      font-size: 5em;
+    }
+  </style>
+</body>
+
+</html>
